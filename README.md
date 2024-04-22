@@ -74,6 +74,43 @@ To start:
     ssserver -c /etc/shadowsocks.json
 
 
+### Build & Publish
+
+Build:
+    # in venv pypi-py3
+    pip install build
+
+    # build the source and binary packages for py3 in the dist/ directory
+    pip -m build
+
+    # in venv pypi-py2
+    pip install build
+
+    # build the binary package for py2 in the dist/ directory
+    pip -m build -w
+
+Publish:
+    # in venv pypi-py3
+    pip install twine
+
+    # publish to Test PyPi
+    twine upload --repository testpypi dist/*
+
+    # publish to PyPi
+    twine upload dist/*
+
+Test installation from Test PyPi:
+    # in venv shadowsocks-py3
+    # use --no-deps for the test pypi
+    pip install -i https://test.pypi.org/simple/ --no-deps shadowsocks-alexforks
+
+Test installation from PyPi:
+    # in venv shadowsocks-py3
+    # use --no-binary to make sure to install from source rather than the binary
+    # combine with --use-pep517 to make sure to use the PEP 517 build system
+    pip install --no-binary --use-pep517 shadowsocks-alexforks
+
+
 Documentation
 -------------
 

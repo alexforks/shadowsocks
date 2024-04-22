@@ -7,7 +7,7 @@ with codecs.open('README.rst', encoding='utf-8') as f:
 
 setup(
     name="shadowsocks-alexforks",
-    version="3.0.2",
+    version="3.0.11",
     license='http://www.apache.org/licenses/LICENSE-2.0',
     description="A fast tunnel proxy that help you get through firewalls. FALL in forks.",
     author='clowwindy',
@@ -18,6 +18,8 @@ setup(
         'shadowsocks': ['README.rst', 'LICENSE']
     },
     install_requires=[],
+    setup_requires=['wheel'],
+    requires_python='>=2.6, !=3.0.*, !=3.1.*, !=3.2.*',
     entry_points="""
     [console_scripts]
     sslocal = shadowsocks.local:main
@@ -37,5 +39,4 @@ setup(
     ],
     long_description=long_description,
     long_description_content_type="text/markdown",
-
 )
