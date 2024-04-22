@@ -1,4 +1,4 @@
-About shadowsocks-rm
+About shadowsocks-alexforks
 ---------------
 
 This project is https://github.com/shadowsocks/shadowsocks clone. I JUST fix bug on the original code. Unless it is necessary to have additional features.
@@ -21,14 +21,14 @@ Debian / Ubuntu:
 ::
 
     apt-get install python-pip
-    pip install shadowsocks
+    pip install shadowsocks-alexforks
 
 CentOS:
 
 ::
 
     yum install python-setuptools && easy_install pip
-    pip install shadowsocks
+    pip install shadowsocks-alexforks
 
 Windows:
 
